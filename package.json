@@ -1,0 +1,28 @@
+{
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.4.0",
+    "babel-preset-es2015": "^6.22.0",
+    "uglifyjs-webpack-plugin": "^0.3.1",
+    "webpack": "^2.6.1"
+  },
+  "dependencies": {
+    "eclipse": "^2.0.1",
+    "jquery": "^3.1.1"
+  },
+  "description": "eclipse-ui library",
+  "keywords": [
+    "eclipse",
+    "eclipse-ui"
+  ],
+  "license": "MIT",
+  "main": "./dist/eclipse-ui.js",
+  "name": "eclipse-ui",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serhioses/eclipse-ui-2.git"
+  },
+  "scripts": {},
+  "version": "2.0.0",
+  "author": "Serhiy Miroshnik"
+}
