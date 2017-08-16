@@ -17,26 +17,26 @@ $(document).ready(() => {
   // Bundle (END)
 
   // Search
-  fetch('countries.json').then((response) => {
-    return response.json();
-  }).then((countries) => {
-    countries.forEach((country) => {
-      var div = document.createElement('div');
+  // fetch('countries.json').then((response) => {
+  //   return response.json();
+  // }).then((countries) => {
+  //   countries.forEach((country) => {
+  //     var div = $('<div/>');
 
-      div.dataset.euiQ = true;
+  //     div.attr('data-eui-q', true);
 
-      div.innerHTML = country.country;
+  //     div.html(country.country);
 
-      document.getElementById('countries').appendChild(div);
-    });
+  //     $('#countries').append(div);
+  //   });
 
-    var s = new eclipse.UI.Search($('#countries'), {
-      invokeCallback: true,
-      callback: function () {
-        onInput.log(0);
-      }
-    });
-    s.init();
-  });
+  //   var s = new eclipse.UI.Search($('#countries'), {
+  //     invokeCallback: true,
+  //     callback: function () {
+  //       onInput.log(0);
+  //     }
+  //   });
+  //   s.init();
+  // });
   // Search (END)
 });
