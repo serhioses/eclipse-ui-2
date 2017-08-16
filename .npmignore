@@ -1,5 +1,7 @@
-node_modules/
-webpack.config.js
-index.html
-script.js
-style.css
+/node_modules/*
+/webpack.config.js
+/index.html
+/script.js
+/style.css
+/countries.json
+/countries.json
