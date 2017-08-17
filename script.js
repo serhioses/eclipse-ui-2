@@ -2,7 +2,7 @@
 
 $(document).ready(() => {
   // Bundle
-  // eclipse.UI.Bundle.hideOnClickOutside();
+  // eclipse.UI.Bundle.onClickOutside();
   // var bundle1 = new eclipse.UI.Bundle($('.nav-trigger'), '', {
   //   container: $('.nav'),
   //   // overlay: $('.overlay')
@@ -51,6 +51,26 @@ $(document).ready(() => {
   // });
   // s.init();
   // Spinner (END)
+
+  // Dropdown
+  eclipse.UI.Dropdown.onClickOutside();
+
+  var d = new eclipse.UI.Dropdown($('#dropdown'), {
+    trigger: 'dd-eui-trigger',
+    effect: 'slide',
+    animationDuration: 300,
+    hideOnClickOutside: false,
+    hideOnClickOtherDropdown: false
+  });
+  d.init();
+
+  var d2 = new eclipse.UI.Dropdown($('#dropdown-1'), {
+    trigger: 'dd-eui-trigger',
+    effect: 'fade',
+    animationDuration: 300
+  });
+  d2.init();
+  // Dropdown (END)
 
   
 });
