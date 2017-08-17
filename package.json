@@ -7,7 +7,7 @@
     "webpack": "^2.6.1"
   },
   "dependencies": {
-    "eclipse": "^2.0.1",
+    "eclipse": "^2.0.2",
     "jquery": "^3.1.1"
   },
   "description": "eclipse-ui library",

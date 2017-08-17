@@ -53,24 +53,35 @@ $(document).ready(() => {
   // Spinner (END)
 
   // Dropdown
-  eclipse.UI.Dropdown.onClickOutside();
+  // eclipse.UI.Dropdown.onClickOutside();
 
-  var d = new eclipse.UI.Dropdown($('#dropdown'), {
-    trigger: 'dd-eui-trigger',
-    effect: 'slide',
-    animationDuration: 300,
-    hideOnClickOutside: false,
-    hideOnClickOtherDropdown: false
-  });
-  d.init();
+  // var d = new eclipse.UI.Dropdown($('#dropdown'), {
+  //   trigger: 'dd-eui-trigger',
+  //   effect: 'slide',
+  //   animationDuration: 300,
+  //   hideOnClickOutside: false,
+  //   hideOnClickOtherDropdown: false
+  // });
+  // d.init();
 
-  var d2 = new eclipse.UI.Dropdown($('#dropdown-1'), {
-    trigger: 'dd-eui-trigger',
-    effect: 'fade',
-    animationDuration: 300
-  });
-  d2.init();
+  // var d2 = new eclipse.UI.Dropdown($('#dropdown-1'), {
+  //   trigger: 'dd-eui-trigger',
+  //   effect: 'fade',
+  //   animationDuration: 300
+  // });
+  // d2.init();
   // Dropdown (END)
 
+  // Tabs
+  var t = new eclipse.UI.ResponsiveTabs($('#tabs'), {
+    hideAjacentTabsMobile: false,
+    hideAjacentTabsDesktop: true,
+    toggleTabsDesktop: false,
+    toggleTabsMobile: true,
+    bindDesktopToMobile: true,
+    bindMobileToDesktop: true
+  });
+  t.init();
+  // Tabs (END)
   
 });
