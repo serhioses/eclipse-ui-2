@@ -23,6 +23,12 @@ a, .overlay, .presentation__letter, .button, .header, .nav, .search {
   transition: all 0.3s ease-in-out;
 }
 
+#square {
+  width: 120px;
+  height: 120px;
+  background-color: cornflowerblue;
+}
+
 img {
   width: auto;
   max-width: 100%;
