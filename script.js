@@ -5,13 +5,14 @@ $(document).ready(() => {
   // eclipse.UI.Bundle.onClickOutside();
   // var bundle1 = new eclipse.UI.Bundle($('.nav-trigger'), '', {
   //   container: $('.nav'),
-  //   // overlay: $('.overlay')
-  //   hideOnClickOutside: false
+  //   overlay: $('.overlay'),
+  //   hideOnClickOutside: true
   // });
   // bundle1.init();
   
   // var bundle2 = new eclipse.UI.Bundle($('.search-trigger'), $('.search__close'), {
-  //   container: $('.search')
+  //   container: $('.search'),
+  //   hideOnClickOutside: true
   // });
   // bundle2.init();
   // Bundle (END)

@@ -142,7 +142,7 @@ img {
   left: -100%;
   z-index: 2;
 }
-.nav.eui-bundle-container--active {
+.nav.bundle-eui-container--active {
   opacity: 1;
   left: 0;
 }
@@ -172,7 +172,7 @@ img {
   z-index: 1;
   cursor: pointer;
 }
-.overlay.eui-bundle-overlay--visible {
+.overlay.bundle-eui-overlay--visible {
   opacity: 1;
   left: 0;
 }
