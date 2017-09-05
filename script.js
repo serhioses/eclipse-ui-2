@@ -74,18 +74,19 @@ $(document).ready(() => {
   // Dropdown (END)
 
   // Tabs
-  // var t = new eclipse.UI.ResponsiveTabs($('#tabs'), {
-  //   desktopEffect: 'fade',
-  //   desktopSpeed: 1000,
-  //   mobileSpeed: 2000,
-  //   hideAjacentTabsMobile: true,
-  //   hideAjacentTabsDesktop: true,
-  //   toggleTabsDesktop: true,
-  //   toggleTabsMobile: true,
-  //   bindDesktopToMobile: false,
-  //   bindMobileToDesktop: true
-  // });
-  // t.init();
+  var t = new eclipse.UI.ResponsiveTabs($('#tabs'), {
+    desktopEffect: 'fade',
+    desktopSpeed: 1000,
+    mobileSpeed: 2000,
+    hideAjacentTabsMobile: true,
+    hideAjacentTabsDesktop: true,
+    toggleTabsDesktop: false,
+    toggleTabsMobile: true,
+    bindDesktopToMobile: true,
+    bindMobileToDesktop: true,
+    hideWithAnimationDesktop: false
+  });
+  t.init();
   // Tabs (END)
 
   // requestAnimationFrame
