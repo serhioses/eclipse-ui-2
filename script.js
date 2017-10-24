@@ -18,27 +18,29 @@ $(document).ready(() => {
   // Bundle (END)
 
   // Search
-  // fetch('countries.json').then((response) => {
-  //   return response.json();
-  // }).then((countries) => {
-  //   countries.forEach((country) => {
-  //     var div = $('<div/>');
+  fetch('countries.json').then((response) => {
+    return response.json();
+  }).then((countries) => {
+    countries.forEach((country) => {
+      var div = $('<div/>');
 
-  //     div.attr('data-eui-q', true);
+      div.attr('data-eui-search-q', true);
 
-  //     div.html(country.country);
+      div.html(country.country);
 
-  //     $('#countries').append(div);
-  //   });
+      $('.s-eui-list').append(div);
+    });
 
-  //   var s = new eclipse.UI.Search($('#countries'), {
-  //     invokeCallback: true,
-  //     callback: function () {
-  //       onInput.log(0);
-  //     }
-  //   });
-  //   s.init();
-  // });
+    $('[data-eui-search-q="true"]').wrap('<div class="s-eui-box-parent">');
+
+    var s = new eclipse.UI.Search($('#countries'), {
+      invokeCallback: true,
+      callback: function () {
+        onInput.log(0);
+      }
+    });
+    s.init();
+  });
   // Search (END)
 
   // Spinner

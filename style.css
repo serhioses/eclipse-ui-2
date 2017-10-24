@@ -230,7 +230,7 @@ img {
   color: rgba(255, 255, 255, 0.54);
 }
 
-.s-eui-match--invisible {
+.s-eui-box-parent--invisible {
   display: none;
   /* opacity: 0.1; */
 }
