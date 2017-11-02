@@ -26,6 +26,39 @@
                 </nav>
                 <div class="overlay" data-eui-bundle-id="nav" data-eui-bundle-action="close" data-eui-bundle data-eui-bundle-outside></div>
             </header>
+
+            <div id="select" data-eui-dropdown data-eui-select>
+                <div class="select dd-eui-dropdown" data-eui-dropdown-level="1">
+                    <div class="select__value dd-eui-trigger sel-eui-value">
+                        Сортировка
+                    </div>
+                    <div class="select__drop dd-eui-drop">
+                        <div class="select__items">
+                            <div class="select__item sel-eui-option">
+                                <input id="sort-1" class="sel-eui-checkbox" type="checkbox" name="sort" value="" />
+                                <label class="sel-eui-label" for="sort-1">от дешевых к дорогим</label>
+                            </div>
+                            <div class="select__item sel-eui-option">
+                                <input id="sort-2" class="sel-eui-checkbox" type="checkbox" name="sort" value="" />
+                                <label class="sel-eui-label" for="sort-2">от дорогих к дешевым</label>
+                            </div>
+                            <div class="select__item sel-eui-option">
+                                <input id="sort-3" class="sel-eui-checkbox" type="checkbox" name="sort" value="" />
+                                <label class="sel-eui-label" for="sort-3">по рейтингу</label>
+                            </div>
+                            <div class="select__item sel-eui-option">
+                                <input id="sort-4" class="sel-eui-checkbox" type="checkbox" name="sort" value="" />
+                                <label class="sel-eui-label" for="sort-4">новинки</label>
+                            </div>
+                            <div class="select__item sel-eui-option">
+                                <input id="sort-5" class="sel-eui-checkbox" type="checkbox" name="sort" value="" />
+                                <label class="sel-eui-label" for="sort-5">акции</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <button class="search-trigger button button--default button--blue" data-eui-bundle-id="search" data-eui-bundle-action="toggle" data-eui-bundle data-eui-bundle-outside>
                 <span class="button__text">Показать поиск</span>
             </button>

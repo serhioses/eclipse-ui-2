@@ -67,6 +67,15 @@ $(document).ready(() => {
   // });
   // d.init();
 
+  var select = new eclipse.UI.Select($('#select'), {
+    dropdownOptions: {
+      trigger: 'dd-eui-trigger',
+      effect: 'fade',
+      animationDuration: 300
+    }
+  });
+  select.init();
+
   // var d2 = new eclipse.UI.Dropdown($('#dropdown-1'), {
   //   trigger: 'dd-eui-trigger',
   //   effect: 'fade',
