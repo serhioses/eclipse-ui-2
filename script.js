@@ -18,27 +18,29 @@ $(document).ready(() => {
   // Bundle (END)
 
   // Search
-  // fetch('countries.json').then((response) => {
-  //   return response.json();
-  // }).then((countries) => {
-  //   countries.forEach((country) => {
-  //     var div = $('<div/>');
+  fetch('countries.json').then((response) => {
+    return response.json();
+  }).then((countries) => {
+    countries.forEach((country) => {
+      var div = $('<div/>');
 
-  //     div.attr('data-eui-q', true);
+      div.attr('data-eui-search-q', true);
 
-  //     div.html(country.country);
+      div.html(country.country);
 
-  //     $('#countries').append(div);
-  //   });
+      $('.s-eui-list').append(div);
+    });
 
-  //   var s = new eclipse.UI.Search($('#countries'), {
-  //     invokeCallback: true,
-  //     callback: function () {
-  //       onInput.log(0);
-  //     }
-  //   });
-  //   s.init();
-  // });
+    $('[data-eui-search-q="true"]').wrap('<div class="s-eui-box-parent">');
+
+    var s = new eclipse.UI.Search($('#countries'), {
+      invokeCallback: true,
+      callback: function () {
+        onInput.log(0);
+      }
+    });
+    s.init();
+  });
   // Search (END)
 
   // Spinner
@@ -74,6 +76,7 @@ $(document).ready(() => {
   // Dropdown (END)
 
   // Tabs
+  // var state = {};
   var t = new eclipse.UI.ResponsiveTabs($('#tabs'), {
     desktopEffect: 'fade',
     desktopSpeed: 1000,
@@ -85,11 +88,21 @@ $(document).ready(() => {
     bindDesktopToMobile: true,
     bindMobileToDesktop: true,
     hideWithAnimationDesktop: false,
-    conditions: {
-      2: function (tabs) {
-        return false;
-      }
-    }
+    // wait: {
+    //   2: function (tabs, id) {
+    //     if ($('.t-eui-tab-item[data-eui-tab="' + id + '"]').hasClass('t-eui-tab-item--active') || state[id]) {
+    //       return;
+    //     } else {
+    //       return new Promise((resolve, reject) => {
+    //         setTimeout(function () {
+    //           console.log('timeout');
+    //           state[id] = true;
+    //           resolve(1);
+    //         }, 2000);
+    //       });
+    //     }
+    //   }
+    // }
   });
   t.init();
   // Tabs (END)
