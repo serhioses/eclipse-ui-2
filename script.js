@@ -84,7 +84,12 @@ $(document).ready(() => {
     toggleTabsMobile: true,
     bindDesktopToMobile: true,
     bindMobileToDesktop: true,
-    hideWithAnimationDesktop: false
+    hideWithAnimationDesktop: false,
+    conditions: {
+      2: function (tabs) {
+        return false;
+      }
+    }
   });
   t.init();
   // Tabs (END)
