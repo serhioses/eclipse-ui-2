@@ -56,7 +56,7 @@ $(document).ready(() => {
   // Spinner (END)
 
   // Dropdown
-  // eclipse.UI.Dropdown.onClickOutside();
+  eclipse.UI.Dropdown.onClickOutside();
 
   // var d = new eclipse.UI.Dropdown($('#dropdown'), {
   //   trigger: 'dd-eui-trigger',

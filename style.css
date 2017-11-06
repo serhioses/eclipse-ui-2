@@ -536,3 +536,19 @@ img {
     margin-bottom: 0;
   }
 }
+
+/* Select */
+.sel-eui-option {
+  cursor: pointer;
+}
+.sel-eui-option--disabled {
+  cursor: not-allowed;
+}
+.sel-eui-option--selected {
+  background-color: #dadada;
+}
+.sel-eui-option--highlighted, .sel-eui-option:hover {
+  background-color: #3949ab;
+  color: #fff;
+}
+/* Select (END) */
