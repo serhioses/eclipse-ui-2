@@ -551,14 +551,18 @@ img {
   line-height: 36px;
   cursor: pointer;
 }
-.sel-eui-option--disabled {
+.sel-eui-option--disabled,
+.sel-eui-option--disabled .sel-eui-label {
   cursor: not-allowed;
 }
 .sel-eui-option--selected {
   background-color: #dadada;
 }
-.sel-eui-option--highlighted, .sel-eui-option:hover {
+.sel-eui-option--highlighted, .sel-eui-option:hover:not(.sel-eui-option--disabled) {
   background-color: #3949ab;
   color: #fff;
+}
+body {
+  min-height: 1000px;
 }
 /* Select (END) */
