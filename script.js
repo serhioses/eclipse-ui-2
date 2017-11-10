@@ -44,19 +44,19 @@ $(document).ready(() => {
   // Search (END)
 
   // Spinner
-  var s = new eclipse.UI.Spinner($('#spinner'), {
-    min: -7,
-    max: 19.85,
-    initial: 0,
-    step: 0.725,
-    precision: 3,
-    postfix: ' %',
-    format: function (val) {
-      // return val + ' %';
-      return '$' + val;
-    }
-  });
-  s.init();
+  // var s = new eclipse.UI.Spinner($('#spinner'), {
+  //   min: -7,
+  //   max: 19.85,
+  //   initial: 0,
+  //   step: 0.725,
+  //   precision: 3,
+  //   postfix: ' %',
+  //   format: function (val) {
+  //     // return val + ' %';
+  //     return '$' + val;
+  //   }
+  // });
+  // s.init();
   // Spinner (END)
 
   // Dropdown

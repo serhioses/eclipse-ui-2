@@ -539,6 +539,16 @@ img {
 
 /* Select */
 .sel-eui-option {
+  padding-left: 0;
+  line-height: 1;
+}
+.sel-eui-option input {
+  display: none;
+}
+.sel-eui-label {
+  display: block;
+  padding-left: 16px;
+  line-height: 36px;
   cursor: pointer;
 }
 .sel-eui-option--disabled {
