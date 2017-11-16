@@ -75,7 +75,10 @@ $(document).ready(() => {
     dropdownOptions: {
       effect: 'fade',
       animationDuration: 300,
-      shouldPreventDefault: false
+      shouldPreventDefault: false,
+      beforeOpen() {
+        // console.log(arguments);
+      }
     }
   });
   select.init();
