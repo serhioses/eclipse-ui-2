@@ -7,7 +7,6 @@ import Search from './lib/search';
 import Spinner from './lib/spinner';
 import Dropdown from './lib/dropdown';
 import {StaticTabs, ResponsiveTabs} from './lib/tabs';
-import Select from './lib/select';
 
 eclipse.utils.namespace('UI');
 
@@ -17,4 +16,3 @@ eclipse.UI.Spinner = Spinner;
 eclipse.UI.Dropdown = Dropdown;
 eclipse.UI.StaticTabs = StaticTabs;
 eclipse.UI.ResponsiveTabs = ResponsiveTabs;
-eclipse.UI.Select = Select;
