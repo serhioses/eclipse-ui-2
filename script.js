@@ -44,19 +44,22 @@ $(document).ready(() => {
   // Search (END)
 
   // Spinner
-  // var s = new eclipse.UI.Spinner($('#spinner'), {
-  //   min: -7,
-  //   max: 19.85,
-  //   initial: 0,
-  //   step: 0.725,
-  //   precision: 3,
-  //   postfix: ' %',
-  //   format: function (val) {
-  //     // return val + ' %';
-  //     return '$' + val;
-  //   }
-  // });
-  // s.init();
+  var s = new eclipse.UI.Spinner($('#spinner'), {
+    min: 100,
+    max: 2000,
+    initial: 0,
+    step: 10,
+    precision: 3,
+    postfix: ' %',
+    format: function (val) {
+      // return val + ' %';
+      return '$ ' + val;
+    },
+    replaceNotNumber(val) {
+      return val.replace(/[^\d-\.]/gi, '');
+    }
+  });
+  s.init();
   // Spinner (END)
 
   // Dropdown
@@ -81,6 +84,7 @@ $(document).ready(() => {
   //     }
   //   }
   // });
+  // console.log(select);
   // select.init();
 
   // var d2 = new eclipse.UI.Dropdown($('#dropdown-1'), {
@@ -162,58 +166,58 @@ $(document).ready(() => {
     }
   });
 
-  (function () {
-    var select = document.getElementById('select'),
-      structure = {};
+  // (function () {
+  //   var select = document.getElementById('select'),
+  //     structure = {};
 
-    function parseTree (parent, s, optgroup) {
-      var children = parent.children;
+  //   function parseTree (parent, s, optgroup) {
+  //     var children = parent.children;
 
-      if (!children) {
-        return;
-      }
+  //     if (!children) {
+  //       return;
+  //     }
 
-      for (let i = 0; i < children.length; i += 1) {
-        let child = children[i],
-          data = {};
+  //     for (let i = 0; i < children.length; i += 1) {
+  //       let child = children[i],
+  //         data = {};
 
-        if (child.className === 'optgroup') {
-          data.type = 'optgroup';
-          data.el = child;
-          data.next = {};
+  //       if (child.className === 'optgroup') {
+  //         data.type = 'optgroup';
+  //         data.el = child;
+  //         data.next = {};
 
-          if (!s.optgroups) {
-              s.optgroups = [];
-            }
+  //         if (!s.optgroups) {
+  //             s.optgroups = [];
+  //           }
 
-          s.optgroups.push(data);
+  //         s.optgroups.push(data);
 
-          if (child.children) {
-            parseTree(child, data.next, data);
-          }
-        } else if (child.className === 'optgroup-label') {
-          if (optgroup) {
-            optgroup.label = {
-              el: child,
-              type: 'optgroup'
-            };
-          }
-        } else {
-          data.type = 'option';
-          data.el = child;
+  //         if (child.children) {
+  //           parseTree(child, data.next, data);
+  //         }
+  //       } else if (child.className === 'optgroup-label') {
+  //         if (optgroup) {
+  //           optgroup.label = {
+  //             el: child,
+  //             type: 'optgroup'
+  //           };
+  //         }
+  //       } else {
+  //         data.type = 'option';
+  //         data.el = child;
 
-          if (!s.options) {
-            s.options = [];
-          }
+  //         if (!s.options) {
+  //           s.options = [];
+  //         }
 
-          s.options.push(data);
-        }
-      }
+  //         s.options.push(data);
+  //       }
+  //     }
 
-      return s;
-    }
+  //     return s;
+  //   }
 
-    console.log(parseTree(select, structure));
-  }());
+  //   console.log(parseTree(select, structure));
+  // }());
   
 });
