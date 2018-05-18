@@ -26,38 +26,70 @@
                 </nav>
                 <div class="overlay" data-eui-bundle-id="nav" data-eui-bundle-action="close" data-eui-bundle data-eui-bundle-outside></div>
             </header>
-
-            <div id="select" data-eui-dropdown data-eui-select>
+            <div id="select" tabindex="0" data-eui-dropdown data-eui-select>
                 <div class="select dd-eui-dropdown" data-eui-dropdown-level="1">
                     <div class="select__value dd-eui-trigger sel-eui-value">
                         Сортировка
                     </div>
-                    <div class="select__drop dd-eui-drop">
+                    <div class="select__drop sel-eui-drop dd-eui-drop">
+                        <div class="select__items sel-eui-items">
+                            <div class="optgroup sel-eui-optgroup">
+                                <div class="optgroup-label sel-eui-optgroup-label" style="font-weight: bold;">Label 1</div>
+                                <div class="select__item option sel-eui-option" style="margin-left: 16px;">45454</div>
+                                <div class="select__item option sel-eui-option" style="margin-left: 16px;">8787</div>
+                                <div class="select__item option sel-eui-option" style="margin-left: 16px;">99</div>
+                            </div>
+                            <div class="select__item option sel-eui-option">7778</div>
+                            <div class="select__item option sel-eui-option">356</div>
+                            <div class="optgroup sel-eui-optgroup">
+                                <div class="optgroup-label sel-eui-optgroup-label" style="margin-left: 16px;font-weight: bold;">Label 2</div>
+                                <div class="select__item option sel-eui-option" style="margin-left: 24px;">21231</div>
+                                <div class="optgroup sel-eui-optgroup" style="margin-left: 24px;">
+                                    <div class="optgroup-label sel-eui-optgroup-label" style="margin-left: 32px;font-weight: bold;">Label 3</div>
+                                    <div class="select__item option sel-eui-option" style="margin-left: 40px;">2121</div>
+                                    <div class="optgroup sel-eui-optgroup">
+                                        <div class="optgroup-label sel-eui-optgroup-label" style="margin-left: 40px;font-weight: bold;">Label 4</div>
+                                        <div class="select__item option sel-eui-option" style="margin-left: 48px;">354</div>
+                                        <div class="select__item option sel-eui-option" style="margin-left: 48px;">86787</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="select__item option sel-eui-option">454</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div id="select" data-eui-dropdown data-eui-select>
+                <div class="select dd-eui-dropdown" data-eui-dropdown-level="1">
+                    <div class="select__value dd-eui-trigger sel-eui-value">
+                        Сортировка
+                    </div>
+                    <div class="select__drop sel-eui-drop dd-eui-drop">
                         <div class="select__items">
-                            <div class="select__item sel-eui-option">
-                                <input id="sort-1" class="sel-eui-checkbox" type="checkbox" name="sort" value="" />
+                            <div class="select__item sel-eui-option sel-eui-option--disabled">
+                                <input id="sort-1" class="sel-eui-radio" type="radio" name="sort" value="" disabled="disabled" />
                                 <label class="sel-eui-label" for="sort-1">от дешевых к дорогим</label>
                             </div>
-                            <div class="select__item sel-eui-option">
-                                <input id="sort-2" class="sel-eui-checkbox" type="checkbox" name="sort" value="" />
+                            <div class="select__item sel-eui-option sel-eui-option--disabled">
+                                <input id="sort-2" class="sel-eui-radio" type="radio" name="sort" value="" disabled="disabled" />
                                 <label class="sel-eui-label" for="sort-2">от дорогих к дешевым</label>
                             </div>
-                            <div class="select__item sel-eui-option">
-                                <input id="sort-3" class="sel-eui-checkbox" type="checkbox" name="sort" value="" />
+                            <div class="select__item sel-eui-option sel-eui-option--disabled">
+                                <input id="sort-3" class="sel-eui-radio" type="radio" name="sort" value="" disabled="disabled" disabled="disabled" />
                                 <label class="sel-eui-label" for="sort-3">по рейтингу</label>
                             </div>
-                            <div class="select__item sel-eui-option">
-                                <input id="sort-4" class="sel-eui-checkbox" type="checkbox" name="sort" value="" />
+                            <div class="select__item sel-eui-option sel-eui-option--disabled">
+                                <input id="sort-4" class="sel-eui-radio" type="radio" name="sort" value="" disabled="disabled" />
                                 <label class="sel-eui-label" for="sort-4">новинки</label>
                             </div>
                             <div class="select__item sel-eui-option">
-                                <input id="sort-5" class="sel-eui-checkbox" type="checkbox" name="sort" value="" />
+                                <input id="sort-5" class="sel-eui-radio" type="radio" name="sort" value="" />
                                 <label class="sel-eui-label" for="sort-5">акции</label>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <button class="search-trigger button button--default button--blue" data-eui-bundle-id="search" data-eui-bundle-action="toggle" data-eui-bundle data-eui-bundle-outside>
                 <span class="button__text">Показать поиск</span>
@@ -75,21 +107,21 @@
             </div>
             
             <!-- Search -->
-            <div id="countries" data-eui-search>
+            <!-- <div id="countries" data-eui-search>
                 <input class="s-eui-field" type="text" placeholder="Search" />
                 <div class="s-eui-list"></div>
-            </div>
+            </div> -->
             
             <!-- Spinner -->
-            <!-- <div id="spinner" class="spinner" data-eui-spinner>
-                <input class="spinner__field form-field text-ultralarge sp-eui-field" type="text" value="1 %" />
+            <div id="spinner" class="spinner" data-eui-spinner>
+                <input class="spinner__field form-field text-ultralarge sp-eui-field" type="text" value="$ 1,500" />
                 <button class="spinner__control spinner__control--plus sp-eui-control sp-eui-control--plus">
                     <span class="spinner__control-text">+</span>
                 </button>
                 <button class="spinner__control spinner__control--minus sp-eui-control sp-eui-control--minus">
                     <span class="spinner__control-text">—</span>
                 </button>
-            </div> -->
+            </div>
 
             <!-- Dropdown -->
             <!-- <div id="dropdown" data-eui-dropdown>
@@ -285,7 +317,7 @@
         </div> -->
 
         <!-- Tabs -->
-        <div id="tabs" class="tabs" data-eui-tabs>
+        <!-- <div id="tabs" class="tabs" data-eui-tabs>
             <div class="tabs__nav">
                 <span class="tabs__link tabs__link--outer t-eui-tab-nav-item t-eui-tab-nav-item--desktop t-eui-tab-nav-item--active t-eui-tab-nav-item--active_desktop" data-eui-tab="1">Видео</span>
                 <span class="tabs__link tabs__link--outer t-eui-tab-nav-item t-eui-tab-nav-item--desktop" data-eui-tab="2">Фото</span>
@@ -404,7 +436,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div id="square"></div>
 

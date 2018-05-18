@@ -23,6 +23,10 @@
     "url": "git+https://github.com/serhioses/eclipse-ui-2.git"
   },
   "scripts": {},
-  "version": "2.2.4",
+<<<<<<< HEAD
+  "version": "2.2.3",
+=======
+  "version": "2.1.3",
+>>>>>>> e47fab95f16fabb65335729c0c55bb06e9aca031
   "author": "Serhiy Miroshnik"
 }
