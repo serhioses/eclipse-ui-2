@@ -1119,7 +1119,7 @@ function delegate() {
     }
 
     // field.val(parseFloat(field.val()).toFixed(parseInt(spinner._defaults.precision, 10) || 0) + spinner._defaults.postfix);
-    field.val(spinner._defaults.format(val.toFixed(precision)));
+    field.val(spinner._defaults.format(val.toFixed(spinner._defaults.precision)));
   });
   body.on('keydown', function (e) {
     var spinner, target, field;
