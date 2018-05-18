@@ -1110,16 +1110,17 @@ function delegate() {
     max = parseFloat(spinner._defaults.max);
 
     if (val > max && !isNaN(max)) {
-      field.val(spinner._defaults.format(max));
+      field.val(spinner._defaults.format(max.toFixed(spinner._defaults.precision)));
     } else if (val < min && !isNaN(min)) {
-      field.val(spinner._defaults.format(min));
+      field.val(spinner._defaults.format(min.toFixed(spinner._defaults.precision)));
     } else if (!_eclipse2.default.helpers.isNumeric(val)) {
-      // field.val(spinner._defaults.initial + spinner._defaults.postfix);
-      field.val(spinner._defaults.format(spinner._defaults.initial));
+      field.val(spinner._defaults.format(spinner._defaults.initial.toFixed(spinner._defaults.precision)));
+    } else {
+      field.val(spinner._defaults.format(val.toFixed(spinner._defaults.precision)));
     }
 
     // field.val(parseFloat(field.val()).toFixed(parseInt(spinner._defaults.precision, 10) || 0) + spinner._defaults.postfix);
-    field.val(spinner._defaults.format(val.toFixed(spinner._defaults.precision)));
+    // field.val(spinner._defaults.format(val.toFixed(spinner._defaults.precision)));
   });
   body.on('keydown', function (e) {
     var spinner, target, field;
